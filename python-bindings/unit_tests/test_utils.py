@@ -1,7 +1,7 @@
 from typing import Union, Optional
 import numpy as np
 import tempfile
-import h5py
+import pyfive
 import requests
 import os
 import time
@@ -39,7 +39,7 @@ def get_ann_benchmark_dataset(dataset_name):
 
         with open(loc, "wb") as f:
             f.write(response.content)
-        data = h5py.File(loc, "r")
+        data = pyfive.File(loc, "r")
 
     training_set = data["train"]
     queries = data["test"]

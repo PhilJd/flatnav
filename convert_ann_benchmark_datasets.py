@@ -1,5 +1,5 @@
 import sys
-import h5py
+import pyfive
 import numpy as np 
 
 filename = sys.argv[1]
@@ -8,7 +8,7 @@ if '--normalize' in sys.argv:
     print("Normalizing") 
     normalize = True
 
-f = h5py.File(filename, 'r')
+f = pyfive.File(filename, 'r')
 
 # ['distances', 'neighbors', 'test', 'train']
 # file format:

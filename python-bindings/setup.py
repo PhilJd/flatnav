@@ -4,11 +4,7 @@ import sys, subprocess
 from typing import List
 __version__ = "0.1.2"
 
-package_description_path = os.path.join(
-    os.path.join(os.path.dirname(__file__), "..", "README.md")
-)
-with open(package_description_path, "r") as f:
-    package_description = f.read()
+package_description = "No description, reading it is broken."
 
 class UnsupportedPlatformError(Exception):
     pass
@@ -136,7 +132,7 @@ setup(
     install_requires=[
         # The following need to be synced with pyproject.toml
         "numpy>=1.21.0,<2",
-        "h5py==3.11.0"
+        "pyfive",
     ],
     license="Apache License, Version 2.0",
     keywords=["similarity search", "vector databases", "machine learning"],

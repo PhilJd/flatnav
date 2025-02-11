@@ -29,10 +29,10 @@ manylinux-pypy_x86_64-image = "manylinux2014"
 
 [tool.cibuildwheel.linux]
 repair-wheel-command = "auditwheel repair -w {dest_dir} {wheel}"
-before-test = "pip install 'pytest' 'black' 'numpy<2.0' 'h5py' 'requests'"
+before-test = "pip install 'pyfive' 'pytest' 'black' 'numpy<2.0' 'requests'"
 test-command = "pytest -vs {package}/unit_tests"
 
 [tool.cibuildwheel.macos]
 before-all = "brew install libomp"
-before-test = "pip install 'pytest' 'black' 'numpy<2.0' 'h5py' 'requests'"
+before-test = "pip install 'pyfive' 'pytest' 'black' 'numpy<2.0' 'requests'"
 test-command = "pytest -vs {package}/unit_tests"
