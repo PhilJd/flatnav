@@ -131,7 +131,7 @@ setup(
     cmake_args=construct_cmake_args(),
     install_requires=[
         # The following need to be synced with pyproject.toml
-        "numpy>=1.21.0,<2",
+        "numpy>=1.21",
         "pyfive",
     ],
     license="Apache License, Version 2.0",

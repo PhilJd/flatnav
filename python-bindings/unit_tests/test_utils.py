@@ -39,7 +39,7 @@ def get_ann_benchmark_dataset(dataset_name):
 
         with open(loc, "wb") as f:
             f.write(response.content)
-        data = pyfive.File(loc, "r")
+        data = pyfive.File(loc)
 
     training_set = data["train"]
     queries = data["test"]
